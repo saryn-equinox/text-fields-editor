@@ -1,24 +1,85 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TextFieldsEditor" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="mQT-Aa-MUy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="191"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type zipcode here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ob7-5r-slP">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$00.00" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5ed-fs-tHv">
+                                        <rect key="frame" x="0.0" y="63.5" width="320" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pOx-R7-UIf">
+                                        <rect key="frame" x="0.0" y="127.5" width="320" height="63.5"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Toggle the switch to lock and unlock" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FUp-p0-gaj">
+                                                <rect key="frame" x="0.0" y="0.0" width="269" height="63.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vJY-9o-0he">
+                                                <rect key="frame" x="271" y="16" width="51" height="31"/>
+                                                <connections>
+                                                    <action selector="switchToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="S0a-x8-bio"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="FUp-p0-gaj" firstAttribute="top" secondItem="pOx-R7-UIf" secondAttribute="top" id="6o8-vW-cbi"/>
+                                            <constraint firstItem="FUp-p0-gaj" firstAttribute="leading" secondItem="pOx-R7-UIf" secondAttribute="leading" id="BZt-sA-hyL"/>
+                                            <constraint firstItem="vJY-9o-0he" firstAttribute="centerY" secondItem="pOx-R7-UIf" secondAttribute="centerY" id="Lxl-3g-Dxt"/>
+                                            <constraint firstAttribute="trailing" secondItem="vJY-9o-0he" secondAttribute="trailing" id="M2X-7T-X9n"/>
+                                            <constraint firstItem="vJY-9o-0he" firstAttribute="trailing" secondItem="FUp-p0-gaj" secondAttribute="trailing" constant="51" id="VEy-Lk-MKU"/>
+                                            <constraint firstAttribute="bottom" secondItem="FUp-p0-gaj" secondAttribute="bottom" id="q0G-zP-gTr"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mQT-Aa-MUy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="04H-Uu-xdS"/>
+                            <constraint firstItem="mQT-Aa-MUy" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="64a-ts-LW0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="mQT-Aa-MUy" secondAttribute="bottom" constant="377" id="D0x-TQ-AGF"/>
+                            <constraint firstItem="mQT-Aa-MUy" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="agT-Sj-tZ1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cashText" destination="5ed-fs-tHv" id="HbK-Ag-Jmr"/>
+                        <outlet property="lockableText" destination="FUp-p0-gaj" id="21X-u8-5cj"/>
+                        <outlet property="zipcodeText" destination="ob7-5r-slP" id="vU4-gl-mBt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-202.5" y="114.08450704225352"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

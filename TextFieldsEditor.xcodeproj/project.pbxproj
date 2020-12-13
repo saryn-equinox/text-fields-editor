@@ -13,6 +13,9 @@
 		9798358C25856CB900827726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9798358A25856CB900827726 /* Main.storyboard */; };
 		9798358E25856CBC00827726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9798358D25856CBC00827726 /* Assets.xcassets */; };
 		9798359125856CBC00827726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9798358F25856CBC00827726 /* LaunchScreen.storyboard */; };
+		9798359F25856D1D00827726 /* CashTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9798359E25856D1D00827726 /* CashTextFieldDelegate.swift */; };
+		979835A225856DF400827726 /* LockableTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979835A125856DF400827726 /* LockableTextFieldDelegate.swift */; };
+		979835A525856E0C00827726 /* ZipCodeTextFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 979835A425856E0C00827726 /* ZipCodeTextFieldDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		9798358D25856CBC00827726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9798359025856CBC00827726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9798359225856CBC00827726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9798359E25856D1D00827726 /* CashTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CashTextFieldDelegate.swift; sourceTree = "<group>"; };
+		979835A125856DF400827726 /* LockableTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockableTextFieldDelegate.swift; sourceTree = "<group>"; };
+		979835A425856E0C00827726 /* ZipCodeTextFieldDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZipCodeTextFieldDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 		9798358325856CB900827726 /* TextFieldsEditor */ = {
 			isa = PBXGroup;
 			children = (
+				9798359D25856CF800827726 /* TextFieldDelegate */,
 				9798358425856CB900827726 /* AppDelegate.swift */,
 				9798358625856CB900827726 /* SceneDelegate.swift */,
 				9798358825856CB900827726 /* ViewController.swift */,
@@ -65,6 +72,16 @@
 				9798359225856CBC00827726 /* Info.plist */,
 			);
 			path = TextFieldsEditor;
+			sourceTree = "<group>";
+		};
+		9798359D25856CF800827726 /* TextFieldDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				9798359E25856D1D00827726 /* CashTextFieldDelegate.swift */,
+				979835A125856DF400827726 /* LockableTextFieldDelegate.swift */,
+				979835A425856E0C00827726 /* ZipCodeTextFieldDelegate.swift */,
+			);
+			path = TextFieldDelegate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +155,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				9798358925856CB900827726 /* ViewController.swift in Sources */,
+				979835A525856E0C00827726 /* ZipCodeTextFieldDelegate.swift in Sources */,
+				9798359F25856D1D00827726 /* CashTextFieldDelegate.swift in Sources */,
 				9798358525856CB900827726 /* AppDelegate.swift in Sources */,
 				9798358725856CB900827726 /* SceneDelegate.swift in Sources */,
+				979835A225856DF400827726 /* LockableTextFieldDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
